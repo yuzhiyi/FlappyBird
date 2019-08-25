@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#game {
+    width: 343px;
+    height: 480px;
+    background: red;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#gameStart {
+    height: 100%;
+    position: relative;
+}
+
+#headTitle {
+    width: 276px;
+    height: 77px;
+    position: absolute;
+    left: 52px;
+    top: 100px;
+    background: black;
+    line-height: 86px;
+    animation: ud 0.2s linear infinite alternate;
+    -o-animation: ud 0.2s linear infinite alternate;
+    -moz-animation: ud 0.2s linear infinite alternate;
+    -webkit-animation: ud 0.2s linear infinite alternate;
+}
+
+@keyframes ud{
+    from {top: 100px;}
+    to {top: 97px}
+}
+@-o-keyframes ud{
+    from {top: 100px;}
+    to {top: 97px}
+}
+@-moz-keyframes ud{
+    from {top: 100px;}
+    to {top: 97px}
+}
+@-webkit-keyframes ud{
+    from {top: 100px;}
+    to {top: 97px}
+}
+
+#line {
+    width: 200%;
+    height: 14px;
+    background: -webkit-linear-gradient(left, red, blue); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, red, blue);
+    position: absolute;
+    left: 0;
+    bottom: 42px;
+    animation: lineMove 5s linear infinite normal;
+    -o-animation: lineMove 5s linear infinite normal;
+    -moz-animation: lineMove 5s linear infinite normal;
+    -webkit-animation: lineMove 5s linear infinite normal;
+}
+
+@keyframes lineMove{
+    from {left: 0;}
+    to {left: -343px;}
+}
+@-o-keyframes lineMove{
+    from {left: 0;}
+    to {left: -343px;}
+}
+@-moz-keyframes lineMove{
+    from {left: 0;}
+    to {left: -343px;}
+}
+@-webkit-keyframes lineMove{
+    from {left: 0}
+    to {left: -343px}
+}
+
+#headTitle div {
+    margin-left: 200px;
+}
+
+#btn {
+    width: 85px;
+    height: 29px;
+    background: green;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    cursor: pointer;
+}
+
+#gameEnter {
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+#myBird {
+    width: 40px;
+    height: 26px;
+    position: absolute;
+    left: 60px;
+    top: 160px;
+    z-index: 999;
+}
+
+#pipes {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#pipes .p {
+    width: 62px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 343px;
+    z-index: 99;
+}
+
+#pipes .p .up {
+    /*height: 96px;*/
+}
+
+#pipes .p .up .up_mod {
+    /*height: 36px;*/
+    background: blue;
+}
+
+#pipes .p .up .up_pipe {
+    height: 60px;
+    background: green;
+}
+
+#pipes .p .down {
+    /*height: calc(480px - 96px - 100px - 42px - 14px);*/
+    margin-top: 100px;
+}
+
+#pipes .p .down .down_mod {
+    /*height: calc(480px - 96px - 100px - 42px - 14px - 60px);*/
+    background: blue;
+}
+
+#pipes .p .down .down_pipe {
+    height: 60px;
+    background: green;
+}
+
+#scores {
+    width: 100%;
+    height: 60px;
+    font-size: 42px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    z-index: 999;
+}

@@ -1,0 +1,7 @@
+node_modules/
+logs/*
+scripts/csvInfo.json
+dump.rdb
+package-lock.json
+.idea
+public/
